@@ -1,7 +1,7 @@
 # Loading
 ![](https://img.shields.io/badge/platform-android-orange.svg)
 ![](https://img.shields.io/badge/language-java-yellow.svg)
-![](https://jitpack.io/v/com.iwdael/loading.svg)
+![](https://jitpack.io/v/com.ansolm/loading.svg)
 ![](https://img.shields.io/badge/build-passing-brightgreen.svg)
 ![](https://img.shields.io/badge/license-apache--2.0-green.svg)
 ![](https://img.shields.io/badge/api-19+-green.svg)
@@ -14,7 +14,7 @@
 
 #### 代码示例
 ```
-<com.iwdael.loading.LoadingView
+<com.ansolm.loading.LoadingView
         android:id="@+id/avi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -36,7 +36,7 @@ allprojects {
 #### 配置App Module下build.gradle
 ```
 dependencies {
-    implementation com.iwdael:loading:$version
+    implementation com.ansolm:loading:$version
 }
 ```
 
@@ -87,7 +87,7 @@ dependencies {
  * `SemiCircleSpinIndicator`
  
 **Row 8**
- * `com.iwdael.loading.demo.MyCustomIndicator`
+ * `com.ansolm.loading.demo.MyCustomIndicator`
 
 
 ### 感谢

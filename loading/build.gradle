@@ -1,14 +1,33 @@
 apply from: './../config.gradle'
 apply plugin: 'com.android.library'
-apply plugin: 'com.github.dcendents.android-maven'
-
 android {
-    buildToolsVersion buidConfig.buildToolsVersion
-    compileSdkVersion buidConfig.compileSdkVersion
+    publishing {
+        singleVariant('release')
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    namespace 'com.ansolm.loading'
+    compileSdk = 37
     defaultConfig {
-        minSdkVersion buidConfig.minSdkVersion
-        targetSdkVersion buidConfig.targetSdkVersion
+        minSdk = 21
+        targetSdk = 37
         versionCode buidConfig.versionCode
         versionName buidConfig.versionName
+    }
+}
+apply plugin: 'maven-publish'
+
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                groupId = 'com.github.ansolm'
+                artifactId = 'loading'
+                version = '1.0.0'
+                from components.release
+            }
+        }
     }
 }
